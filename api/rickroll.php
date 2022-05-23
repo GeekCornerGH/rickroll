@@ -5,7 +5,7 @@ $discord = false;
 if(strpos($reverseDNS, "googleusercontent.com") || strpos($reverseDNS, "ptr.discord.com")) $discord = true; // Probably Discord.
 if(!$discord) header("Location: https://youtube.com/watch?v=dQw4w9WgXcQ");
 
-$url = "http://" . ($_GET["url"] ? preg_replace("/http(s?):\//", "", $_GET["url"]) : "preview.redd.it/bllt4ulpwn671.png?width=960&crop=smart&auto=webp&s=485bb446bbe95eda5d660c45f0f69ce48f3993da");
+$url = "http://" . ($_GET["url"] ? preg_replace("/http(s?):\//", "", $_GET["url"]) : "cdn.discordapp.com/attachments/409300913262690326/948326675769348096/Courier.png?width=497&height=671");
 $curl = curl_init($url);
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
