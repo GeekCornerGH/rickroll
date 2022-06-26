@@ -2,7 +2,7 @@
 $reverseDNS = gethostbyaddr($_SERVER["REMOTE_ADDR"]);
 $discord = false;
 
-if(strpos($reverseDNS, "googleusercontent.com") || strpos($reverseDNS, "ptr.discord.com")) $discord = true; // Probably Discord.
+if(strpos($reverseDNS, "googleusercontent.com") || strpos($reverseDNS, "ptr.discord.com")||strpos( $user_agent, 'Discordbot')) $discord = true; // Probably Discord.
 if(!$discord) header("Location: https://youtube.com/watch?v=dQw4w9WgXcQ#rickroll-allowed");
 
 $url = "http://" . ($_GET["url"] ? preg_replace("/http(s?):\//", "", $_GET["url"]) : "preview.redd.it/bllt4ulpwn671.png?width=960&crop=smart&auto=webp&s=485bb446bbe95eda5d660c45f0f69ce48f3993da");
