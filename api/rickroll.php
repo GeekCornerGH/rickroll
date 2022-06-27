@@ -1,6 +1,9 @@
 <?php
+
 $reverseDNS = gethostbyaddr($_SERVER["REMOTE_ADDR"]);
 $discord = false;
+error_log(print_r($reverseDNS));
+error_log(print_r($user_agent));
 
 if(stripos($reverseDNS, "googleusercontent.com") || stripos($reverseDNS, "ptr.discord.com")||stripos( $user_agent, 'Discordbot')) $discord = true; // Probably Discord.
 if(!$discord) header("Location: https://youtube.com/watch?v=dQw4w9WgXcQ#rickroll-allowed");
