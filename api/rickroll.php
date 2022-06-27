@@ -1,6 +1,7 @@
 <?php
 
 $reverseDNS = gethostbyaddr($_SERVER["REMOTE_ADDR"]);
+$userAgent = strtolower($_SERVER['HTTP_USER_AGENT']);
 $discord = false;
 error_log(print_r($reverseDNS));
 error_log(print_r($user_agent));
